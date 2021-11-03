@@ -1,0 +1,59 @@
+Microsoft Windows [Version 10.0.19042.1288]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\z004du6d>pwd
+'pwd' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\z004du6d>cd /Users/z004du6d/Desktop/cv
+
+C:\Users\z004du6d\Desktop\cv>git init
+Initialized empty Git repository in C:/Users/z004du6d/Desktop/cv/.git/
+
+C:\Users\z004du6d\Desktop\cv>git add .
+
+C:\Users\z004du6d\Desktop\cv>git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   GithubCv.pdf
+        new file:   GithubCv.synctex.gz
+        new file:   GithubCv.tex
+
+
+C:\Users\z004du6d\Desktop\cv>git commit -m "First commit"
+[master (root-commit) 2aa6585] First commit
+ Committer: Bolat <meryem.bolat@siemens.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 3 files changed, 208 insertions(+)
+ create mode 100644 GithubCv.pdf
+ create mode 100644 GithubCv.synctex.gz
+ create mode 100644 GithubCv.tex
+
+C:\Users\z004du6d\Desktop\cv>git remote add origin https://github.com/Meryem-b/CvLaTeX.git
+
+C:\Users\z004du6d\Desktop\cv>git push -u origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 184.56 KiB | 11.53 MiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Meryem-b/CvLaTeX.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+C:\Users\z004du6d\Desktop\cv>
