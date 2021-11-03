@@ -1,0 +1,208 @@
+
+\documentclass[paper=a4,fontsize=11pt]{scrartcl} % KOMA-article class
+	 \usepackage{setspace}						
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[protrusion=true,expansion=true]{microtype}
+\usepackage{amsmath,amsfonts,amsthm}     % Math packages
+\usepackage{graphicx}                    % Enable pdflatex
+\usepackage[svgnames]{xcolor}            % Colors by their 'svgnames'
+\usepackage{geometry}
+	\textheight=600px                    % Saving trees ;-)
+\usepackage{url}
+\usepackage{blindtext}
+
+\usepackage{hyperref}
+
+
+\frenchspacing              % Better looking spacings after periods
+\pagestyle{empty}           % No pagenumbers/headers/footers
+
+%%% Custom sectioning (sectsty package)
+%%% ------------------------------------------------------------
+\usepackage{sectsty}
+
+\sectionfont{%			            % Change font of \section command
+	\usefont{OT1}{phv}{b}{n}%		% bch-b-n: CharterBT-Bold font
+	\sectionrule{0pt}{0pt}{-5pt}{3pt}}
+
+%%% Macros
+%%% ------------------------------------------------------------
+\newlength{\spacebox}
+\settowidth{\spacebox}{8888888888}			% Box to align text
+\newcommand{\sepspace}{\vspace*{1em}}		% Vertical space macro
+
+\newcommand{\MyName}[1]{ % Name
+		\Huge \usefont{OT1}{phv}{b}{n} \hfill #1
+		\par \normalsize \normalfont}
+		
+\newcommand{\MySlogan}[1]{ % Slogan (optional)
+		\large \usefont{OT1}{phv}{m}{n}\hfill \textit{#1}
+		\par \normalsize \normalfont}
+
+\newcommand{\NewPart}[1]{\section*{\uppercase{#1}}}
+
+\newcommand{\PersonalEntry}[2]{
+		\noindent\hangindent=2em\hangafter=0 % Indentation
+		\parbox{\spacebox}{        % Box to align text
+		\textit{#1}}		       % Entry name (birth, address, etc.)
+		\hspace{1.5em} #2 \par}    % Entry value
+
+\newcommand{\SkillsEntry}[2]{      % Same as \PersonalEntry
+		\noindent\hangindent=2em\hangafter=0 % Indentation
+		\parbox{\spacebox}{        % Box to align text
+		\textit{#1}}			   % Entry name (birth, address, etc.)
+		\hspace{1.5em} #2 \par}    % Entry value	
+		
+\newcommand{\EducationEntry}[4]{
+		\noindent \textbf{#1} \hfill      % Study
+		\colorbox{White}{%
+			\parbox{6em}{%
+			\hfill\color{Black}#2}} \par  % Duration
+		\noindent \textit{#3} \par        % School
+		\noindent\hangindent=2em\hangafter=0 \small #4 % Description
+		\normalsize \par}
+
+\newcommand{\WorkEntry}[4]{				  % Same as \EducationEntry
+		\noindent \textbf{#1} \hfill      % Jobname
+		\colorbox{Black}{\color{White}#2} \par  % Duration
+		\noindent \textit{#3} \par              % Company
+		\noindent\hangindent=2em\hangafter=0 \small #4 % Description
+		\normalsize \par}
+
+
+\newcommand{\RefeEntry}[4]{				  % Same as \EducationEntry
+		\noindent \textbf{#1} \hfill      % Jobname
+		\noindent\hangindent=2em\hangafter=0 \small #4 % Description
+		\normalsize \par}
+
+%%% Begin Document
+%%% ------------------------------------------------------------
+\begin{document}
+
+\begin{centering}
+	\includegraphics[width=2.6cm]{picture}
+\sepspace
+
+
+
+{\LARGE\bfseries\sffamily MERYEM SEMA BOLAT } \\[.1cm]
+{\small  \href{mailto:writeEmai@hotmail.com}{writeEmail@hotmail.com}  \\[.1cm]
+  +90 542 000 00 00   \\
+Uskudar / Istanbul }\\[.1cm]
+%February 16 , 1999}\\
+\PersonalEntry{GitHub}{\url{https://github.com/Meryem-b}}
+\PersonalEntry{LinkedIn}{\url{https://www.linkedin.com/in/meryem-sema-bolat/}}
+
+\end{centering}
+%\rule[0.5mm]{\textwidth}{0.01pt}
+
+
+
+\NewPart{Education}{}
+
+\EducationEntry{B.S. in Mathematics Engineering, Istanbul Technical University }{2017 - 2021}
+{Thesis: Lie symmetry of differential equations (Advisor: Doç.Dr. Nurettin Cenk Turgay)  (3.49/4.00)}
+
+\singlespace
+
+\EducationEntry{Philippines Language Center }{2016 - 2017}{English language education in the Philippines.}
+\singlespace
+
+\EducationEntry{Open High School Education}{2012 - 2016}
+\singlespace
+
+
+%%% ------------------------------------------------------------
+
+\NewPart{Work experience}{}
+
+
+%\EducationEntry{SIEMENS Software Developer, Part-time}{Aug.-Oct. 21}
+%\sepspace
+
+\EducationEntry{SIEMENS, Test Automation Engineer, Part-time}{Aug.}
+{JAVA, Data Structures And Algorithms, OOP (Java), introduction to computer architecture, script programing (Python), Linux, CI/CD And DevOps, SDLC , STLC And Testing Fundamentals (ISTQB) , Software Test Automation on Selenium And Java }
+\sepspace
+
+\EducationEntry{INTELLICA, Data Warehouse Analyst, Intern}{Aug.-Sept. 21}
+{Data Warehouse and  Data, Modeling, SQL, ODI (Oracle Data Integrator), Data Mining, Data Visualization, Cognos, Informatica, Introduction to Cloud. }
+\sepspace
+
+
+\EducationEntry{ITU TEKNOKENT AMANI AI, Part-time}{Jan.- May. 21 }
+{Python and OpenCV: Real-Time Image Processing, artificial intelligence \\
+Projects have been completed on topics such as image processing, artificial intelligence and OPENCV. }
+\sepspace
+\sepspace
+
+\EducationEntry{SODACO Company, Part-time}{Dec. 20 - 21}
+{Software Developer and Business Development Representative}
+\sepspace
+
+
+
+\EducationEntry{ITU Underwater Vehicle Team, Volunteer}{2017 - 2018}
+{By using OPENCV, the image data received by the vehicle were processed with the algorithms developed by the software team, and the text, number, color and geometric shape were determined in the image.
+\url{https://rov.itu.edu.tr/}}
+\singlespace
+
+%\EducationEntry{ITU Drone Team , Volunteer}{2017-2018}{ Image manipulation with OPENCV}
+%\sepspace
+
+
+
+
+%%% ------------------------------------------------------------
+\NewPart{Skills}{}
+{
+\textsc{Java}, \textsc{Python}, \textsc{C++ } ,\textsc{C } , \textsc{PHP }, \textsc{JavaScript }, \textsc{Linux}  \\
+\textsc{Web Programming  (HTML | PHP | CSS | JS | mySQL)} \\
+\textsc{Matlab}, \textsc{wolfram mathematica }, \textsc{SQL}, \textsc{ OpenCV}, \textsc{DevOps}\\
+\textsc{ODI (Oracle Data Integrator) }, \LaTeX, \textsc{OOP in Java and C++ }\\
+ \textsc{Microsoft Office} } 
+
+
+\SkillsEntry{ \LARGE\bfseries\sffamily  Projects:} 
+\sepspace
+{
+\url{https://www.beplusglobal.com/BePlus.php}\\
+\url{https://web.itu.edu.tr/bolat16/Meryem/MeryemLoginPage.php}\\
+\url{https://web.itu.edu.tr/bolat16/Coffeehouse.php} \\
+
+}
+
+\sepspace
+
+\SkillsEntry{Languages}{English (Advanced)}
+\SkillsEntry{}{German (Beginner)}
+\SkillsEntry{}{Italian (Beginner)}
+%%% ------------------------------------------------------------
+\NewPart{Certificate}{}
+
+\EducationEntry{ITU High Honor Certificate(3.50/ 4.00  average )}{2018 - 2019 }
+\singlespace
+
+\EducationEntry{Mindset Institute C Level English Certificate}{2017 - 2018 }
+\singlespace
+
+\EducationEntry{Philippines English Center B1+ Level English Certificate )}{2016 - 2017}
+\singlespace
+
+%%% ------------------------------------------------------------
+\NewPart{Articles}{}
+
+\EducationEntry{Lie Symmetries Of Differential Equations }{2020 - 2021}
+\singlespace
+
+\EducationEntry{The Importance Of Libraries}{2019 - 2020}
+\singlespace
+
+%%% ------------------------------------------------------------
+\NewPart{References}
+References part is here
+
+\singlespacing
+
+
+\end{document}
